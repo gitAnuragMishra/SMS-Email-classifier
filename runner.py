@@ -41,11 +41,11 @@ def transform_text(text):
 if st.button("predict"):
 
     transformed_text = transform_text(text)
-    vector = vect.fit_transform(transformed_text)
-    result = model.predict(vector)[0]
+    vector = vect.transform([transformed_text])
+    result = model.predict(vector)
 
 
-    if result ==1:
+    if result == 1:
         st.header("Spam")
 
     else:
