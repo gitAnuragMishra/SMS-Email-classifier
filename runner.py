@@ -12,7 +12,10 @@ model = pickle.load(open('RFclassifier.pkl','rb'))
 
 st.title('Spam Classifier')
 text = st.text_area("Enter text")
+import setup
 
+# Download NLTK resources
+setup.download_nltk_resources()
 def transform_text(text):
     text  = text.lower() #lowercasing
     text  = nltk.word_tokenize(text) #tokenize
