@@ -1,5 +1,6 @@
 seaborn
 numpy
-sklearn
+scikit-klearn
 nltk
 pandas
+pickle5
