@@ -3,6 +3,7 @@ import pickle
 import nltk
 import string
 nltk.download('stopwords')
+nltk.download('punkt')
 from nltk.corpus import stopwords
 word_corpus = stopwords.words('english')
 from nltk.stem import PorterStemmer
