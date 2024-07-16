@@ -2,6 +2,7 @@ import streamlit as st
 import pickle
 import nltk
 import string
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 word_corpus = stopwords.words('english')
 from nltk.stem import PorterStemmer
@@ -9,8 +10,7 @@ port = PorterStemmer()
 punc = string.punctuation
 vect = pickle.load(open('vectoriser.pkl', 'rb'))
 model = pickle.load(open('RFclassifier.pkl','rb'))
-nltk.download('punkt')
-nltk.download('stopwords')
+
 st.title('Spam Classifier')
 text = st.text_area("Enter text")
 
