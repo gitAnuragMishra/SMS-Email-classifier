@@ -9,7 +9,10 @@ port = PorterStemmer()
 punc = string.punctuation
 vect = pickle.load(open('vectoriser.pkl', 'rb'))
 model = pickle.load(open('RFclassifier.pkl','rb'))
+import setup
 
+# Download NLTK resources
+setup.download_nltk_resources()
 st.title('Spam Classifier')
 text = st.text_area("Enter text")
 
